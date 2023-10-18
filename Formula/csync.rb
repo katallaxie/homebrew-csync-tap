@@ -5,22 +5,22 @@
 class Csync < Formula
   desc ""
   homepage "https://katallaxie.github.io/csync/"
-  version "0.1.1"
+  version "0.5.0-beta"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/katallaxie/csync/releases/download/v0.1.1/csync_0.1.1_darwin_arm64.tar.gz"
-      sha256 "7cd0235e0d65f2ecb1f79de7fb345a6b2e7c26d8e4d4dd5d8b735f53126ab1b4"
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.0-beta/csync_0.5.0-beta_darwin_arm64.tar.gz"
+      sha256 "d06f5006ed1832a6cad278e052d9668bd841f840c51e75396a9dd0427c3220c9"
 
       def install
         bin.install "csync"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/katallaxie/csync/releases/download/v0.1.1/csync_0.1.1_darwin_amd64.tar.gz"
-      sha256 "6d9dd7b9fee543ad08735c5d21ea70169ecc11eec51187bfa682fd99145328c3"
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.0-beta/csync_0.5.0-beta_darwin_amd64.tar.gz"
+      sha256 "a98cc6a0b20b384be90525bd0ac92c37530e2e13d2fd5694f07006f696d89bf3"
 
       def install
         bin.install "csync"
@@ -30,16 +30,16 @@ class Csync < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/katallaxie/csync/releases/download/v0.1.1/csync_0.1.1_linux_amd64.tar.gz"
-      sha256 "e8e8905d0e42a24cb5ae2ad643fa063814a7956caade27b289b812f2495906ab"
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.0-beta/csync_0.5.0-beta_linux_amd64.tar.gz"
+      sha256 "32e14044eefe29cb8feb1a171bbb17dc6e736e8a633eaa05933a13e0ee11214b"
 
       def install
         bin.install "csync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/katallaxie/csync/releases/download/v0.1.1/csync_0.1.1_linux_arm64.tar.gz"
-      sha256 "5f9e9230e09085b118058ee47b9d741fd7391eea271829215c1c79ce6f701fac"
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.0-beta/csync_0.5.0-beta_linux_arm64.tar.gz"
+      sha256 "2dfaf26036f760acaabb981a3a2e867d5d4501fd9c268333eb8053ccfcd6c646"
 
       def install
         bin.install "csync"
