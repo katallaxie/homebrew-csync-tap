@@ -5,22 +5,22 @@
 class Csync < Formula
   desc ""
   homepage "https://katallaxie.github.io/csync/"
-  version "0.5.0"
+  version "0.5.1"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/katallaxie/csync/releases/download/v0.5.0/csync_0.5.0_darwin_amd64.tar.gz"
-      sha256 "cd96c891a49ec86b6990d96bd51571827a74fc58f68476f85d93723444def814"
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.1/csync_0.5.1_darwin_amd64.tar.gz"
+      sha256 "c53c7f9d491057199e5642febd72600d5e056734e63e023da61417f131748398"
 
       def install
         bin.install "csync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/katallaxie/csync/releases/download/v0.5.0/csync_0.5.0_darwin_arm64.tar.gz"
-      sha256 "abb185b5bd9e4bbe314c26db72685be4705b7f809588ab84427287623710311b"
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.1/csync_0.5.1_darwin_arm64.tar.gz"
+      sha256 "7ecad2cf6b5f2a493de330e5718f12f98d7019fae7c3cd0d3f2d58f4939542d8"
 
       def install
         bin.install "csync"
@@ -29,17 +29,17 @@ class Csync < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/katallaxie/csync/releases/download/v0.5.0/csync_0.5.0_linux_arm64.tar.gz"
-      sha256 "70a26a55db055808c91921be83c84311ad8fccfe708b180e9e31b436b115e91f"
+    if Hardware::CPU.intel?
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.1/csync_0.5.1_linux_amd64.tar.gz"
+      sha256 "c4a0e1b6654cf86c0d7d7cec29c7f8d4bd07e3753f975bca7f2b6c3bf83de91d"
 
       def install
         bin.install "csync"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/katallaxie/csync/releases/download/v0.5.0/csync_0.5.0_linux_amd64.tar.gz"
-      sha256 "2c8ad4b7ddc204a84f0fbac1c6dfb15f420d8fbd50c6290f9f6422b2c8ac5b73"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.1/csync_0.5.1_linux_arm64.tar.gz"
+      sha256 "2f4b09d749772e8e2f2204c87aa118aef2e6ed77a8794808a29f133cf4b9d640"
 
       def install
         bin.install "csync"
