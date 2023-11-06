@@ -5,22 +5,22 @@
 class Csync < Formula
   desc ""
   homepage "https://katallaxie.github.io/csync/"
-  version "0.5.7"
+  version "0.5.8"
 
   depends_on "go" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/katallaxie/csync/releases/download/v0.5.7/csync_0.5.7_darwin_amd64.tar.gz"
-      sha256 "bf1a7ee13f97f2a088baa18202defb945598b7be3588df235673ea8186c1e19e"
+    if Hardware::CPU.arm?
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.8/csync_0.5.8_darwin_arm64.tar.gz"
+      sha256 "ed6fecfefa1ad3399eb3c39dba79d618f6a2cde3aadbaf76d238459ca9524637"
 
       def install
         bin.install "csync"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/katallaxie/csync/releases/download/v0.5.7/csync_0.5.7_darwin_arm64.tar.gz"
-      sha256 "31e9597b34d5d68ffb7a7d285a5c107b4f75416e68731eb84202f534ef0ce78c"
+    if Hardware::CPU.intel?
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.8/csync_0.5.8_darwin_amd64.tar.gz"
+      sha256 "78fae309ade604022ff399932189e62e4df2a40afb012f7da3fad33d42d44fdf"
 
       def install
         bin.install "csync"
@@ -30,16 +30,16 @@ class Csync < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/katallaxie/csync/releases/download/v0.5.7/csync_0.5.7_linux_amd64.tar.gz"
-      sha256 "652ceac48311165c14ef3ebde7f4ae0facd2497bffad063989e3acc240dd19ba"
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.8/csync_0.5.8_linux_amd64.tar.gz"
+      sha256 "f20cd4da83eaa440e422c4a8aa614c333c69b4cf0d74962aea72e05952a83592"
 
       def install
         bin.install "csync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/katallaxie/csync/releases/download/v0.5.7/csync_0.5.7_linux_arm64.tar.gz"
-      sha256 "4ab0897d9aa700f3e50ffcaff5e36db323f1b7caea5a393633456dca9f9c7c91"
+      url "https://github.com/katallaxie/csync/releases/download/v0.5.8/csync_0.5.8_linux_arm64.tar.gz"
+      sha256 "81be7c218cca6b423af5e76fde7f7c71dd6861e90eea27a7204f4c8e3eda57c6"
 
       def install
         bin.install "csync"
